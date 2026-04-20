@@ -3,6 +3,10 @@ title: 今日复盘：从 Hexo 迁移到 VitePress 并修复 GitHub Pages 404
 date: 2026-04-18
 ---
 
+<!-- [[toc]] 是一个特殊的占位符，它代表 Table of Contents（目录）。当你在 Markdown 的正文中输入这行代码时，VitePress 会自动提取当前页面的所有标题，并在该位置生成一个可点击的跳转目录。
+[[toc]]
+[[toc]]太过丑陋 -->
+
 ## 一、今天完成的功能任务
 
 1. **技术路线确定**
