@@ -1,9 +1,9 @@
 ---
 layout: home
 hero:
-  name: Jiang Pengyu
+  name: 博观而约取，厚积而薄发
   text: 你好，欢迎来到我的个人博客
-  tagline: 这里记录我的学习笔记与项目实践，并且专注于最新的前端AI技术
+  tagline: 你好，欢迎来到我的个人博客，这里将记录我的成长历程
   actions:
     - theme: brand
       text: 查看日志
