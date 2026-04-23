@@ -49,6 +49,18 @@
     </main>
   </div>
 
+  <div v-else-if="isPostsList" class="posts-list-page">
+    <h1 class="posts-list-title">日志</h1>
+    <ul class="posts-list">
+      <li v-for="post in articlePosts" :key="post.url" class="posts-list-item">
+        <a :href="post.url" class="posts-list-link">
+          <span class="posts-list-date">{{ formatDate(post.frontmatter.date) }}</span>
+          <span class="posts-list-name">{{ post.frontmatter.title }}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
   <article v-else class="page-layout vp-doc">
     <header v-if="showMeta" class="page-meta">
       <span v-if="frontmatter.date">发布日期：{{ frontmatter.date }}</span>
@@ -86,6 +98,10 @@ const pageUrl = computed(() => {
 const isPostDetail = computed(() => {
   const relativePath = page.value?.relativePath || ''
   return relativePath.startsWith('posts/') && relativePath !== 'posts/index.md'
+})
+
+const isPostsList = computed(() => {
+  return page.value?.relativePath === 'posts/index.md'
 })
 
 const articlePosts = computed(() => {
@@ -362,6 +378,53 @@ const showMeta = computed(() => {
   margin-bottom: 20px;
   font-size: 14px;
   color: var(--vp-c-text-2);
+}
+
+.posts-list-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 52px 24px 84px;
+}
+
+.posts-list-title {
+  margin: 0 0 32px;
+  font-size: 36px;
+}
+
+.posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.posts-list-item + .posts-list-item {
+  margin-top: 2px;
+}
+
+.posts-list-link {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--vp-c-text-1);
+}
+
+.posts-list-link:hover {
+  background: var(--vp-c-bg-soft);
+}
+
+.posts-list-date {
+  flex-shrink: 0;
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.posts-list-name {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 @media (max-width: 1180px) {
