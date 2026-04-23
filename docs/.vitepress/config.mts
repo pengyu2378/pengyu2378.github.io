@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: 'Personal Blog',
+  title: "Pengyu's Blog",
   description: '记录学习与生活',
   cleanUrls: true,
   ignoreDeadLinks: true,

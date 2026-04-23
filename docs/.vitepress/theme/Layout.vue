@@ -2,7 +2,7 @@
   <div class="site-shell">
     <header class="site-nav">
       <div class="site-nav-inner">
-        <a class="site-brand" href="/">{{ site.title || 'Personal Blog' }}</a>
+        <a class="site-brand" href="/">{{ site.title || 'Pengyu\'s Blog' }}</a>
         <nav class="site-nav-links">
           <a
             v-for="item in navItems"
