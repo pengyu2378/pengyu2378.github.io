@@ -63,6 +63,7 @@ const config: UserConfig = {
 
 export default config
 ```
+:::
 
 <!-- 文件名默认用作标题 -->
 
