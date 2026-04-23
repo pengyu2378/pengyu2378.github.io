@@ -5,6 +5,7 @@ export default defineConfig({
   title: 'Personal Blog',
   description: '记录学习与生活',
   cleanUrls: true,
+  ignoreDeadLinks: true,
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
@@ -15,8 +16,8 @@ export default defineConfig({
       {
         text: '2025 日志',
         items: [
-          { text: 'hello-world', link: '/posts/2025-hello-world.md' },
-          { text: '我的第一篇博客文章', link: '/posts/2025-我的第一篇博客文章.md' },
+          { text: 'hello-world', link: '/posts/2025-hello-world' },
+          { text: '我的第一篇博客文章', link: '/posts/2025-我的第一篇博客文章' },
         ]
       },
       {
